@@ -1,47 +1,4 @@
-باشه، این هم جواب‌ها به صورت جداگانه:
 
-ابتدا، این توابع کمکی عمومی را در ابتدای اسکریپت پایتون خود تعریف کنید، زیرا برخی از تمرین‌ها از آنها استفاده می‌کنند:
-```python
-# Global Helper Functions (تعاریف توابع کمکی عمومی)
-import math # For square root, used in a few exercises
-
-# Helper function to calculate factorial
-def calculate_factorial(n):
-    # Factorial of 0 is 1
-    if n == 0:
-        return 1
-    # Factorial of negative numbers is not defined
-    if n < 0:
-        return None # Or raise an error
-    
-    result = 1
-    # Multiply numbers from 1 to n
-    for i in range(1, n + 1):
-        result = result * i
-    return result
-
-# Helper function to check if a number is prime
-def is_prime(num):
-    # Numbers less than 2 are not prime
-    if num < 2:
-        return False
-    # 2 is the only even prime number
-    if num == 2:
-        return True
-    # Other even numbers are not prime
-    if num % 2 == 0:
-        return False
-    # Check for divisibility from 3 up to the square root of the number
-    # We only need to check odd divisors
-    i = 3
-    while i * i <= num:
-        if num % i == 0:
-            return False
-        i = i + 2
-    return True
-```
-
----
 
 سوال ۱
 اعداد اول: برنامه‌ای در پایتون بنویسید که یک عدد صحیح N را از ورودی دریافت کند. سپس تابعی بنویسید که تمام اعداد اول از ۱ تا N را پیدا کرده و چاپ کند.
